@@ -21,11 +21,11 @@ public class Exprassion {
         }
 
         //function to validate and print the valid expression
-        public void expression(int pos,int prev,int res, String expr) {
-//pos = position in the array sequence
-//prev = previous number in case of multiply and previous result in case of add and subtract
-//res = result calculated so far
-//expr = resulting expression in String format
+        public void expression(int position,int prev,int result, String expr) {
+        //position = position in the array sequence
+        //prev = previous number in case of multiply and previous result in case of add and subtract
+        //result = result calculated so far
+        //expr = resulting expression in String format
 
 
 
@@ -33,37 +33,37 @@ public class Exprassion {
 
 
 
-//if position reaches max length check if
-//result reaches the target value k
-//if reaches print the expression and exit from the current parent method , exit anyway because the max array length is reached
-            if(pos==input.length) {
-                if(res==k) {
+        //if position reaches max length check if
+        //result reaches the target value k
+        //if reaches print the expression and exit from the current parent method , exit anyway because the max array length is reached
+            if(position==input.length) {
+                if(result==k) {
                     output+=expr+' ';
-//output=output+expr+'';
+                //output=output+expr+'';
                     count++;
                 }
                 return;
 
             }
 
-//keeping track of the number in the array based on position
-            int nthnum = input[pos];
+        //keeping track of the number in the array based on position
+            int nthnum = input[position];
 
 
-//for first iteration when the first number in the array is taken into account
-            if(pos==0) {
-                expression(pos+1,nthnum,nthnum,""+nthnum);
+        //for first iteration when the first number in the array is taken into account
+            if(position==0) {
+                expression(position+1,nthnum,nthnum,""+nthnum);
             }
 
-//for all the remaining cases after the first number in array is taken
+        //for all the remaining cases after the first number in array is taken
             else{
-                expression(pos+1,nthnum,res+nthnum,expr+"+"+nthnum);
-                expression(pos+1,nthnum,res-nthnum,expr+"-"+nthnum);
-                expression(pos+1,prev*nthnum,res-prev+prev*nthnum,expr+"*"+nthnum);
+                expression(position+1,nthnum,result+nthnum,expr+"+"+nthnum);
+                expression(position+1,nthnum,result-nthnum,expr+"-"+nthnum);
+                expression(position+1,prev*nthnum,result-prev+prev*nthnum,expr+"*"+nthnum);
             }
 
 
-//incase of no possible combination to react the output
+        //in case of no possible combination to react the output
             if(count==0) {
                 output="There cannot be any combination of +,-,* with input array : " + Arrays.toString(input) + " to reach target : "+ k;
             }
