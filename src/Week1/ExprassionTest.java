@@ -22,12 +22,14 @@ class ExprassionTest {
             assertEquals(obj.output,"3+4*3 3*4+3 ");
 
         }
+
         @Test
         void test2() {
             Exprassion obj = new Exprassion(6,new int[]{1,2,3});
             assertEquals(obj.output,"1+2+3 1*2*3 ");
 
         }
+
         @Test
         void test3() {
             Exprassion obj = new Exprassion(20,new int[]{7,2});
@@ -37,3 +39,5 @@ class ExprassionTest {
 
 
     }
+
+
