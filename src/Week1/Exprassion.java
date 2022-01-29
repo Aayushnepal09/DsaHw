@@ -17,7 +17,6 @@ public class Exprassion {
             count=0;
             expression(0,0,0," ");
 
-
         }
 
         //function to validate and print the valid expression
@@ -26,8 +25,6 @@ public class Exprassion {
         //prev = previous number in case of multiply and previous result in case of add and subtract
         //result = result calculated so far
         //expr = resulting expression in String format
-
-
 
 
 
@@ -62,29 +59,17 @@ public class Exprassion {
                 expression(position+1,prev*nthnum,result-prev+prev*nthnum,expr+"*"+nthnum);
             }
 
-
         //in case of no possible combination to react the output
             if(count==0) {
                 output="There cannot be any combination of +,-,* with input array : " + Arrays.toString(input) + " to reach target : "+ k;
             }
 
         }
-
-
-
-
         public static void main(String[] args) {
-
-
 
             Exprassion obj=new Exprassion(15,new int[]{3,4,3});
 
-
-
             System.out.println(obj.output);
-
-
-
 
         }
 
