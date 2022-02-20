@@ -26,6 +26,4 @@ class NumberOfAtomsTest {
         String res = obj.getFormula("H2O");
         assertEquals(res,"H2O");
     }
-
-
 }
