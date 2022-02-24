@@ -1,33 +1,20 @@
 package Week9;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-import java.awt.Image;
-
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.UIManager;
 import java.awt.Color;
 import javax.swing.border.LineBorder;
-import javax.xml.transform.Source;
-
 import Week9.Algo.Location;
-
-import java.awt.CardLayout;
 import javax.swing.JLabel;
-
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
-
 import javax.swing.JOptionPane;
-
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -35,7 +22,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import java.util.ArrayList;
 import java.util.ListIterator;
 import java.awt.event.ActionListener;
@@ -104,7 +90,7 @@ public class HomePage extends JFrame {
 			else {
 				
 				try {	
-					FileWriter fstream = new FileWriter("C:\\Users\\Ayush\\IdeaProjects\\DsaHw\\src\\Week9\\location_details.csv");
+					FileWriter fstream = new FileWriter("C:\\Users\\Ayush\\IdeaProjects\\DsaHw\\src\\Week9\\location.csv");
 					BufferedWriter out = new BufferedWriter(fstream);
 					
 					out.write("");
@@ -126,13 +112,10 @@ public class HomePage extends JFrame {
 		}
 		
 	}
-	
 	//insert into csv
 	public void insert(String place,String distance,String from) throws IOException {
 		
-		try {		
-						
-			 
+		try {
 			StringBuilder sb1 = new StringBuilder();
 		      sb1.append(place);
 		      sb1.append(",");
@@ -145,13 +128,10 @@ public class HomePage extends JFrame {
 		      sb2.append(distance);
 		      sb2.append(",");
 		      sb2.append(place);
-		      
-	 
-			FileWriter fstream = new FileWriter("C:\\Users\\Ayush\\IdeaProjects\\DsaHw\\src\\Week9\\location_details.csv");
+
+			FileWriter fstream = new FileWriter("C:\\Users\\Ayush\\IdeaProjects\\DsaHw\\src\\Week9\\location.csv");
 			BufferedWriter out = new BufferedWriter(fstream);
-	 
-			
-			
+
 			out.write(sb1.toString());
 			out.newLine();
 			out.write(sb2.toString());
@@ -187,7 +167,7 @@ public class HomePage extends JFrame {
 	public static ArrayList<Location> getAllPlaces() throws IOException {
 		
 		ArrayList<Location> locationList = new ArrayList<Location>();
-		File csvFile = new File("C:\\Users\\Ayush\\IdeaProjects\\DsaHw\\src\\Week9\\location_details.csv");
+		File csvFile = new File("C:\\Users\\Ayush\\IdeaProjects\\DsaHw\\src\\Week9\\location.csv");
 		BufferedReader br = new BufferedReader(new FileReader(csvFile));
 		String line = "";
 		try {
@@ -202,7 +182,6 @@ public class HomePage extends JFrame {
 			//JOptionPane.showMessageDialog(contentPane,"Deleted Route");
 		}
 		
-		
 		return locationList;
 	
 	}
@@ -211,9 +190,9 @@ public class HomePage extends JFrame {
 	 * Create the frame.
 	 */
 	public HomePage() {
-		setUndecorated(true);
+//		setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 862, 490);
+		setBounds(100, 100, 862, 550);
 		
 		
 		//*****
@@ -266,7 +245,7 @@ public class HomePage extends JFrame {
 		panelMenu.setForeground(new Color(240, 255, 240));
 		panelMenu.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		panelMenu.setBackground(new Color(27, 80, 110));
-		panelMenu.setBounds(0, 0, 280, 490);
+		panelMenu.setBounds(0, 0, 280, 550);
 		contentPane.add(panelMenu);
 		panelMenu.setLayout(null);
 		
@@ -275,7 +254,7 @@ public class HomePage extends JFrame {
 		lblNewLabel.setIconTextGap(0);
 		lblNewLabel.setBounds(0, 0, 280, 199);
 		panelMenu.add(lblNewLabel);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Ayush\\Downloads\\menuIcon 1.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Ayush\\IdeaProjects\\DsaHw\\src\\Week9\\img\\menuIcon 1.png"));
 		
 		JLabel lblNewLabel_1 = new JLabel("Menu");
 		lblNewLabel_1.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
@@ -406,7 +385,7 @@ public class HomePage extends JFrame {
 				panelAll.setVisible(false);
 				comboBox_3.setVisible(false);
 				panel_1.setVisible(false);
-				panel.setVisible(true);
+//				panel.setVisible(true);
 				
 			}
 		});
@@ -417,17 +396,17 @@ public class HomePage extends JFrame {
 		panelMenu.add(btnNewButton_1_1_1_1_1);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\Ayush\\Downloads\\menuIcon 2.png"));
+		lblNewLabel_3.setIcon(new ImageIcon("src/Week9/img/menuIcon 2.png"));
 		lblNewLabel_3.setBounds(290, 0, 178, 230);
 		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\Ayush\\Downloads\\menuIcon 3.png"));
+		lblNewLabel_5.setIcon(new ImageIcon("src/Week9/img/menuIcon 3.png"));
 		lblNewLabel_5.setBounds(639, 11, 178, 200);
 		contentPane.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\Ayush\\Downloads\\menuIcon 4.png"));
+		lblNewLabel_6.setIcon(new ImageIcon("src/Week9/img/menuIcon 4.png"));
 		lblNewLabel_6.setBounds(478, 56, 220, 143);
 		contentPane.add(lblNewLabel_6);
 		

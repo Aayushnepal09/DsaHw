@@ -19,8 +19,9 @@ class AlgoTest {
 	void test1() throws NumberFormatException, IOException {
 		ArrayList<Location> locationList = new ArrayList<Location>();
 
-		File csvFile = new File("C:\\Users\\ayush\\IdeaProjects\\DsaHw\\src\\Week9\\location_details.csv");
+		File csvFile = new File("C:\\Users\\ayush\\IdeaProjects\\DsaHw\\src\\Week9\\location.csv");
 		BufferedReader br = new BufferedReader(new FileReader(csvFile));
+
 		String line = "";
 		
 		try {
@@ -42,7 +43,7 @@ class AlgoTest {
 	@Test
 	void test2() throws NumberFormatException, IOException {
 		ArrayList<Location> locationList = new ArrayList<Location>();
-		File csvFile = new File("C:\\Users\\ayush\\IdeaProjects\\DsaHw\\src\\Week9\\location_details.csv");
+		File csvFile = new File("C:\\Users\\ayush\\IdeaProjects\\DsaHw\\src\\Week9\\location.csv");
 		BufferedReader br = new BufferedReader(new FileReader(csvFile));
 		String line = "";
 		

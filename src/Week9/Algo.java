@@ -280,7 +280,7 @@ public class Algo {
 	public static void main(String[] args) throws IOException {
 		
 		ArrayList<Location> locationList = new ArrayList<Location>();
-		File csvFile = new File("C:\\Users\\aayush\\IdeaProjects\\DsaHw\\src\\Week9\\location_details.csv");
+		File csvFile = new File("C:\\Users\\ayush\\IdeaProjects\\DsaHw\\src\\Week9\\location.csv");
 		BufferedReader br = new BufferedReader(new FileReader(csvFile));
 		String line = "";
 		
