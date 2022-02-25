@@ -10,8 +10,8 @@ class criticalPointsTest {
 
     @Test
     void test1() {
-        int visited[][]=CriticalPath.findVisitedPoints(new int[][] {{0,1},{1,2},{2,0},{1,3}});
-        HashMap<Integer, Integer> criticalPoints = CriticalPath.findCriticalPaths(visited);
+        int visited[][]= Path.findVisitedPoints(new int[][] {{0,1},{1,2},{2,0},{1,3}});
+        HashMap<Integer, Integer> criticalPoints = Path.findCriticalPaths(visited);
 
         HashMap<Integer, Integer> testCriticalPoints = new HashMap<Integer, Integer>();
         testCriticalPoints.put(1, 3);
@@ -22,8 +22,8 @@ class criticalPointsTest {
 
     @Test
     void test2() {
-        int visited[][]=CriticalPath.findVisitedPoints(new int[][] {{0,1}});
-        HashMap<Integer, Integer> criticalPoints = CriticalPath.findCriticalPaths(visited);
+        int visited[][]= Path.findVisitedPoints(new int[][] {{0,1}});
+        HashMap<Integer, Integer> criticalPoints = Path.findCriticalPaths(visited);
 
         HashMap<Integer, Integer> testCriticalPoints = new HashMap<Integer, Integer>();
         testCriticalPoints.put(1, 0);

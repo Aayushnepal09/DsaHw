@@ -3,7 +3,7 @@ package Week6;
 import java.util.HashMap;
 
 
-public class CriticalPath {
+public class Path {
 
 
 

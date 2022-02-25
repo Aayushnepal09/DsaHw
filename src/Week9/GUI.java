@@ -14,7 +14,7 @@ import java.util.ListIterator;
 import java.util.Map;
 import java.util.Queue;
 
-public class Algo {
+public class GUI {
 	
 	//Creating a class to store a route i:e source distance and destination
 	static class Location{

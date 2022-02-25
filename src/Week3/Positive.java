@@ -1,6 +1,6 @@
 package Week3;
 
-public class Positive_int {
+public class Positive {
     //creating an array of all possible positive integers
     int numbers[] = {1,2,3,4,5,6,7,8,9};
     //function for finding smallest positive number
@@ -26,7 +26,7 @@ public class Positive_int {
         return 0;
     }
     public static void main(String[] args) {
-        Positive_int obj = new Positive_int();
+        Positive obj = new Positive();
         int res = obj.findSmallest("1689");
         int result = obj.findSmallest("689345");
         System.out.println(res);

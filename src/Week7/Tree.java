@@ -2,7 +2,7 @@ package Week7;
 
 import java.util.*;
 
-public class BurnTree {
+public class Tree {
 
     //creating a map to store node and its parent as key value pair
     public static Map <Integer,Integer> nodeParent = new LinkedHashMap<Integer,Integer>();

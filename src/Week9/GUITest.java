@@ -11,9 +11,9 @@ import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
-import Week9.Algo.Location;
+import Week9.GUI.Location;
 
-class AlgoTest {
+class GUITest {
 
 	@Test
 	void test1() throws NumberFormatException, IOException {
@@ -36,7 +36,7 @@ class AlgoTest {
 		}catch(FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		String shortestPath = Algo.dijikstra(locationList,"kathmandu","jhapa");
+		String shortestPath = GUI.dijikstra(locationList,"kathmandu","jhapa");
 		assertEquals(shortestPath,"kathmandu --- 800 --- damak --- 400 --- jhapa");
 	}
 	
@@ -59,7 +59,7 @@ class AlgoTest {
 		}catch(FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		ArrayList<String> allPaths = Algo.bfs(locationList,"jhapa","kathmandu");
+		ArrayList<String> allPaths = GUI.bfs(locationList,"jhapa","kathmandu");
 		ArrayList<String> allPathsTest = new ArrayList<String>();
 		allPathsTest.add("jhapa --- 1500 --- kathmandu");
 		allPathsTest.add("jhapa --- 400 --- damak --- 800 --- kathmandu");

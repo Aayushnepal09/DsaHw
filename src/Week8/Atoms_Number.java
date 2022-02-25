@@ -2,7 +2,7 @@ package Week8;
 import java.util.*;
 
 
-public class NumberOfAtoms {
+public class Atoms_Number {
     private int pos=0;
     //function to fetch the atoms and count and append all of it to a single string
     public String getFormula(String formula) {
@@ -89,7 +89,7 @@ public class NumberOfAtoms {
     }
 
     public static void main(String[] args) {
-        NumberOfAtoms obj= new NumberOfAtoms();
+        Atoms_Number obj= new Atoms_Number();
         String res = obj.getFormula("Mg3(OH2)2");
         System.out.println(res);
     }

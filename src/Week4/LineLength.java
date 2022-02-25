@@ -3,7 +3,7 @@ package Week4;
 
 import java.util.ArrayList;
 import java.util.Collections;
-public class StraightLineLength {
+public class LineLength {
 
     //Function to find all collinear points
     public static ArrayList<ArrayList<int[]>> findAllCollinearPoints(int arr[][]) {

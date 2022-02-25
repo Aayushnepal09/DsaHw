@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.border.LineBorder;
-import Week9.Algo.Location;
+import Week9.GUI.Location;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
@@ -254,7 +254,7 @@ public class HomePage extends JFrame {
 		lblNewLabel.setIconTextGap(0);
 		lblNewLabel.setBounds(0, 0, 280, 199);
 		panelMenu.add(lblNewLabel);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Ayush\\IdeaProjects\\DsaHw\\src\\Week9\\img\\menuIcon 1.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Ayush\\IdeaProjects\\DsaHw\\src\\Week9\\img\\3.png"));
 		
 		JLabel lblNewLabel_1 = new JLabel("Menu");
 		lblNewLabel_1.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
@@ -394,15 +394,15 @@ public class HomePage extends JFrame {
 		btnNewButton_1_1_1_1_1.setBackground(new Color(0, 128, 128));
 		btnNewButton_1_1_1_1_1.setBounds(10, 287, 260, 40);
 		panelMenu.add(btnNewButton_1_1_1_1_1);
-		
+
 		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("src/Week9/img/menuIcon 2.png"));
+		lblNewLabel_3.setIcon(new ImageIcon("src/Week9/img/2.png"));
 		lblNewLabel_3.setBounds(290, 0, 178, 230);
 		contentPane.add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setIcon(new ImageIcon("src/Week9/img/menuIcon 3.png"));
-		lblNewLabel_5.setBounds(639, 11, 178, 200);
+		JLabel lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("src/Week9/img/1.png"));
+		lblNewLabel_5.setBounds(690, 11, 178, 200);
 		contentPane.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("");
@@ -528,7 +528,7 @@ public class HomePage extends JFrame {
 					catch (Exception s) {
 						JOptionPane.showMessageDialog(contentPane, "Cannot get routes :" +s);
 					}
-					String res = Algo.dijikstra(locationListLocal, source, destination);
+					String res = GUI.dijikstra(locationListLocal, source, destination);
 					comboBox_3.addItem(res);
 				}
 				
@@ -574,7 +574,7 @@ public class HomePage extends JFrame {
 					catch (Exception s) {
 						JOptionPane.showMessageDialog(contentPane, "Cannot get routes :" +s);
 					}
-					ArrayList<String> allPaths = Algo.bfs(locationListLocal,source,destination);
+					ArrayList<String> allPaths = GUI.bfs(locationListLocal,source,destination);
 					allPosiblePaths = toStringArray(allPaths);
 					if(allPosiblePaths.length==0) {
 						comboBox_3.addItem("No routes between selected places are available");
@@ -602,7 +602,7 @@ public class HomePage extends JFrame {
 		panel_1 = new JPanel();
 		panel_1.setLayout(null);
 		panel_1.setVisible(false);
-		panel_1.setBackground(new Color(0, 128, 128));
+		panel_1.setBackground(new Color(104, 154, 96));
 		panel_1.setBounds(300, 233, 552, 92);
 		contentPane.add(panel_1);
 		

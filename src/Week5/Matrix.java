@@ -2,7 +2,7 @@ package Week5;
 
 import java.util.Arrays;
 
-public class RankMatrix {
+public class Matrix {
 
     //sorting matrix in ascending order and storing the elements in a one dimensional array
     public static int[] sortMartix(int mat[][]) {
