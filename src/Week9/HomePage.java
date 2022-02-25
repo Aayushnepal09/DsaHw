@@ -406,7 +406,7 @@ public class HomePage extends JFrame {
 		contentPane.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon("src/Week9/img/menuIcon 4.png"));
+		lblNewLabel_6.setIcon(new ImageIcon("src/Week9/img/4.png"));
 		lblNewLabel_6.setBounds(478, 56, 220, 143);
 		contentPane.add(lblNewLabel_6);
 		
